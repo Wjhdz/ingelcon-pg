@@ -1,12 +1,12 @@
+import IndexRoutes from "./config/navigation/interface/IndexRoutes";
+import "./App.css";
 
-import './App.css'
-
-const App:React.FC=()=>{
-  
-
+const App: React.FC = () => {
   return (
-    <IndexRoutes/>
-  )
-}
+    <>
+      <IndexRoutes />
+    </>
+  );
+};
 
-export default App
+export default App;
