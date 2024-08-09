@@ -1,9 +1,12 @@
 import routeinterface from "../../interfaces/routesInterface";
-import { Home } from "../../pages/Home";
+import About from "../../pages/About";
+import Home from "../../pages/Home";
 
 const Routers = () => {
   const routes: routeinterface[] = [
-    { id: 1, path: "/", name: "home", element: <Home /> },
+    { id: 2, path: "/home", name: "Home", open: true, element: <Home /> },
+    { id: 3, path: "/", name: "Home", open: false, element: <Home /> },
+    { id: 4, path: "/about", name: "About", open: true, element: <About /> },
   ];
   return routes;
 };
