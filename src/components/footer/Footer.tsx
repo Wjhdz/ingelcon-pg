@@ -1,28 +1,32 @@
 import React from "react";
+import { Row, Col, Typography, Space, Button } from "../../tools/desing";
 import {
-  Row,
-  Col,
-  Typography,
-  FacebookOutlined,
-  InstagramOutlined,
-  Space,
-  WhatsAppOutlined,
   MailOutlined,
   EnvironmentOutlined,
-  Button,
-} from "../antd/antdComponents";
+  FacebookOutlined,
+  InstagramOutlined,
+  PhoneFilled,
+} from "../../tools/icon";
 import type { LayoutFooterProps } from "../../interfaces/layout/layout";
+import { colorSecondary, colorSecondaryAndWhite } from "../../css/styles";
+import {
+  direccion,
+  email,
+  facebooklink,
+  instagramLink,
+  tel1,
+  tel2,
+} from "../../constants";
 
 const { Text } = Typography;
 
 const CustomFooter: React.FC = () => {
   const access: LayoutFooterProps[] = [
-    { link: "https://wa.me/tu_numero", icon: <WhatsAppOutlined /> },
     {
-      link: "https://www.instagram.com/tu_perfil",
+      link: instagramLink,
       icon: <InstagramOutlined />,
     },
-    { link: "https://www.facebook.com/tu_perfil", icon: <FacebookOutlined /> },
+    { link: facebooklink, icon: <FacebookOutlined /> },
   ];
 
   const onClick = (link: string) => {
@@ -33,27 +37,39 @@ const CustomFooter: React.FC = () => {
     <Row gutter={[8, 8]}>
       <Col xs={24} md={8} lg={8}>
         <Space direction="vertical">
-          <Text strong>Dirección:</Text>
-          <Text>
-            <EnvironmentOutlined /> Calle Ejemplo 123, Ciudad, País
+          <Text style={colorSecondary} strong>
+            Dirección:
+          </Text>
+          <Text style={colorSecondary}>
+            <EnvironmentOutlined /> {direccion}
           </Text>
         </Space>
       </Col>
       <Col xs={24} md={8} lg={8}>
         <Space direction="vertical">
-          <Text strong>Correo Electrónico:</Text>
-          <Text>
-            <MailOutlined /> contacto@ejemplo.com
+          <Text style={colorSecondary} strong>
+            Correo Electrónico:
+          </Text>
+          <Text style={colorSecondary}>
+            <MailOutlined /> {email}
+          </Text>
+          <Text style={colorSecondary} strong>
+            Telefono:
+          </Text>
+          <Text style={colorSecondary}>
+            <PhoneFilled rotate={90} /> {tel1} - {tel2}
           </Text>
         </Space>
       </Col>
       <Col xs={24} md={8} lg={8}>
         <Space direction="vertical">
-          <Text strong>Síguenos:</Text>
+          <Text style={colorSecondary} strong>
+            Síguenos:
+          </Text>
           <Space size="middle">
             {access.map((item, index) => (
               <Button
-                style={{ color: "white", background: "black" }}
+                style={colorSecondaryAndWhite}
                 key={index}
                 type="link"
                 onClick={() => onClick(item.link)}

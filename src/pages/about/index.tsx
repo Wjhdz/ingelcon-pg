@@ -1,5 +1,5 @@
 import React from "react";
-import { Row } from "../../components/antd/antdComponents";
+import { Row } from "../../tools/desing";
 import LayoutComponent from "../../components/Layout/Layout";
 
 const About: React.FC = () => {

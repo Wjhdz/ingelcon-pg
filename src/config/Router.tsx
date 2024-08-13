@@ -1,14 +1,14 @@
-import routeinterface from "../interfaces/routesInterface";
+import routeinterface from "../interfaces/Router/routesInterface";
 import About from "../pages/about";
 import Home from "../pages/home";
 import NotFound from "../pages/notFound";
 
 const Routers = () => {
   const routes: routeinterface[] = [
-    { id: 3, path: "/", name: "Home", visible: true, element: <Home /> },
-    { id: 4, path: "/about", name: "About", visible: true, element: <About /> },
+    { id: 0, path: "/", name: "Home", visible: true, element: <Home /> },
+    { id: 1, path: "/about", name: "About", visible: true, element: <About /> },
     {
-      id: 5,
+      id: 2,
       path: "/*",
       name: "NotFound",
       visible: false,

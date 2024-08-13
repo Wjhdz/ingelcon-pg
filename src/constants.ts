@@ -1,2 +1,9 @@
-export const titleEnterprise:string = "INCOL NPG";
+export const titleEnterprise: string = "INGELCO NPG";
 export const name: string = "Jorge";
+export const instagramLink = "";
+export const facebooklink = "";
+export const whatsappLink = "https://wa.me/+573005643431";
+export const email = "contacto@ejemplo.com";
+export const tel1 = "3216653009";
+export const tel2 = "3006787710";
+export const direccion = "Calle Ejemplo 123, Ciudad, País";

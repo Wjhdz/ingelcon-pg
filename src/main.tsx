@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom";
-import { ConfigProvider } from "./components/antd/antdComponents.tsx";
+import { ConfigProvider } from "./tools/desing.ts";
 import App from "./App.tsx";
 import "antd/dist/reset.css";
+import { titleEnterprise } from "./constants.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <ConfigProvider>
+        <title>{titleEnterprise}</title>
         <App />
       </ConfigProvider>
     </BrowserRouter>

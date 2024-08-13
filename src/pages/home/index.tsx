@@ -1,5 +1,5 @@
 import React from "react";
-import { Row } from "../../components/antd/antdComponents";
+import { Row } from "../../tools/desing";
 import Layout from "../../components/Layout/Layout";
 import { text } from "../../utils/colors";
 
