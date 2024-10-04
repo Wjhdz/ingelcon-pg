@@ -9,6 +9,7 @@ import {
   Drawer,
   Typography,
 } from "../../tools/desing";
+import { DividerC as Divider } from "../antd/DividerC";
 import { MenuFoldOutlined } from "../../tools/icon";
 import Routers from "../../config/Router";
 import SvgIcon from "../../assests/Logo.svg";
@@ -19,53 +20,66 @@ const { Text } = Typography;
 const NavBar: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
   const [stateOpen, setStateOpen] = useState(false);
+  const screens = useBreakpoint();
 
   return (
-    <Row justify="center">
-      <Col xs={8} md={6}>
-        <Avatar
-          src={<img src={SvgIcon} onClick={() => navigate("/")} />}
-          alt="Custom Icon"
-        ></Avatar>
-      </Col>
-
-      <Col xs={8} md={6} style={colorSecondary} onClick={() => navigate("/")}>
-        {" "}
-        {titleEnterprise}
-      </Col>
-
-      <Col xs={8} md={0}>
-        <Button type="link" onClick={() => setStateOpen(true)}>
-          <MenuFoldOutlined style={colorSecondary} />
-        </Button>
-      </Col>
-
-      {Routers().map((router) => (
+    <Row>
+      {screens.sm || screens.md ? (
         <>
-          {router.visible === true && (
-            <Col xs={0} md={6}>
-              <Button
-                type="link"
-                onClick={() => navigate(router.path)}
-                style={colorSecondary}
-              >
-                {router.name}
-              </Button>
-            </Col>
-          )}
+          <Col span={8} style={{ color: `${secondary}` }}>
+            <Avatar
+              src={<img src={SvgIcon} onClick={() => navigate("/")} />}
+              alt="Custom Icon"
+            ></Avatar>
+            <Divider />
+            {titleEnterprise}
+          </Col>
+          {Routers().map((router) => (
+            <>
+              {router.visible === true && (
+                <Col span={8} style={{ textAlign: "end" }}>
+                  <Button
+                    type="link"
+                    onClick={() => navigate(router.path)}
+                    style={{ color: `${secondary}` }}
+                  >
+                    {router.name}
+                  </Button>
+                </Col>
+              )}
+            </>
+          ))}
         </>
-      ))}
+      ) : (
+        <>
+          {" "}
+          <Col span={12} style={{ color: `${secondary}` }}>
+            <Avatar
+              src={<img src={SvgIcon} onClick={() => navigate("/")} />}
+              alt="Custom Icon"
+            ></Avatar>
+            <Divider />
+            {titleEnterprise}
+          </Col>
+          <Col span={12} style={{ textAlign: "end", color: `${secondary}` }}>
+            <Button type="link" onClick={() => setStateOpen(true)}>
+              <MenuFoldOutlined style={styleColorS} />
+            </Button>
+          </Col>
+        </>
+      )}
 
       <Drawer
         title={
           <Row gutter={[6, 6]}>
-            <Col>
+            <Col style={{ color: `${secondary}` }}>
               <Avatar
                 src={<img src={SvgIcon} />}
                 onClick={() => navigate("/")}
                 alt="Custom Icon"
               ></Avatar>
-              <Text style={colorSecondary}>{titleEnterprise}</Text>
+              <Divider />
+              {titleEnterprise}
             </Col>
           </Row>
         }
@@ -73,16 +87,17 @@ const NavBar: React.FC = () => {
         closable={false}
         onClose={() => setStateOpen(false)}
         open={stateOpen}
+        width={'280px'}
       >
         <Row gutter={[8, 8]}>
           {Routers().map((router) => (
             <>
               {router.visible === true && (
-                <Col xs={24}>
+                <Col span={24}>
                   <Button
                     type="link"
                     onClick={() => navigate(router.path)}
-                    style={colorSecondary}
+                    style={styleColorS}
                   >
                     {router.name}
                   </Button>
@@ -95,5 +110,6 @@ const NavBar: React.FC = () => {
     </Row>
   );
 };
+
 
 export default NavBar;
