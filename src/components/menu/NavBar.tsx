@@ -1,21 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import type { NavigateFunction } from "react-router-dom";
-import {
-  Row,
-  Col,
-  Button,
-  Avatar,
-  Drawer,
-  Typography,
-} from "../../tools/desing";
+import { Row, Col, Button, Avatar, Drawer, Grid } from "../../tools/desing";
+import { secondary } from "../../../src/utils/colors";
 import { DividerC as Divider } from "../antd/DividerC";
 import { MenuFoldOutlined } from "../../tools/icon";
 import Routers from "../../config/Router";
 import SvgIcon from "../../assests/Logo.svg";
 import { titleEnterprise } from "../../constants";
-import { colorSecondary } from "../../css/styles";
-const { Text } = Typography;
+import { colorSecondary as styleColorS } from "../../css/styles";
+const { useBreakpoint } = Grid;
 
 const NavBar: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
@@ -23,7 +17,7 @@ const NavBar: React.FC = () => {
   const screens = useBreakpoint();
 
   return (
-    <Row>
+    <Row style={{position:"sticky" }}>
       {screens.sm || screens.md ? (
         <>
           <Col span={8} style={{ color: `${secondary}` }}>
@@ -32,7 +26,13 @@ const NavBar: React.FC = () => {
               alt="Custom Icon"
             ></Avatar>
             <Divider />
-            {titleEnterprise}
+            <Button
+              type="link"
+              onClick={() => navigate("/")}
+              style={{ paddingInlineStart: "2px"  ,color: `${secondary}` }}
+            >
+              {titleEnterprise}
+            </Button>
           </Col>
           {Routers().map((router) => (
             <>
@@ -87,7 +87,7 @@ const NavBar: React.FC = () => {
         closable={false}
         onClose={() => setStateOpen(false)}
         open={stateOpen}
-        width={'280px'}
+        width={"280px"}
       >
         <Row gutter={[8, 8]}>
           {Routers().map((router) => (
@@ -110,6 +110,5 @@ const NavBar: React.FC = () => {
     </Row>
   );
 };
-
 
 export default NavBar;

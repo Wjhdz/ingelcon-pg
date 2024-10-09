@@ -12,5 +12,7 @@ export {
   Result,
   Divider,
   FloatButton,
+  Grid,
+  Carousel,
+  Image,
 } from "antd";
-  
