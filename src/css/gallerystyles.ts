@@ -13,6 +13,7 @@ export const carouselContainerStyle: React.CSSProperties = {
 export const carouselImageStyle: React.CSSProperties = {
   objectFit: "cover",
   width: "1000px",
+  borderRadius: "8px",
   height: "400px", // Ajusta esta altura según tus necesidades
 };
 

@@ -8,8 +8,8 @@ import {
   buttonOverlayStyle,
   buttonHoverStyle, // Nuevo estilo para hover
 } from "../../css/gallerystyles";
-import { imagesCarouselv2 as images, ObjectImage } from "../../utils/images.ts";
-// import { secondary } from "../../utils/colors";
+import { imagesCarouselv2 as images, ObjectImage } from "../../utils/images";
+
 const { useBreakpoint } = Grid;
 
 const ImageCarousel: React.FC = () => {

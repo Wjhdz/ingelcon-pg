@@ -5,6 +5,7 @@ import CustomFloatButton from "../Button/CustomFloatButton";
 import childrenprops from "../../interfaces/propsInterface";
 import { Layout } from "../../tools/desing";
 import { backgroundColorWhite, colorSecondary } from "../../css/styles";
+import { secondary } from "../../utils/colors";
 
 const { Header, Content, Footer } = Layout;
 
@@ -17,6 +18,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
           top: 0,
           zIndex: 1,
           ...backgroundColorWhite,
+          borderBottom: `0.5px solid ${secondary}`,
         }}
       >
         <NavBar />

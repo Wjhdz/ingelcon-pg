@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import type { NavigateFunction } from "react-router-dom";
-import { Row, Col, Button, Avatar, Drawer, Grid } from "../../tools/desing";
+import {
+  Row,
+  Col,
+  Button,
+  Avatar,
+  Drawer,
+  Grid,
+  Typography,
+} from "../../tools/desing";
 import { secondary } from "../../../src/utils/colors";
 import { DividerC as Divider } from "../antd/DividerC";
 import { MenuFoldOutlined } from "../../tools/icon";
@@ -10,6 +18,7 @@ import SvgIcon from "../../assests/Logo.svg";
 import { titleEnterprise } from "../../constants";
 import { colorSecondary as styleColorS } from "../../css/styles";
 const { useBreakpoint } = Grid;
+const { Text } = Typography;
 
 const NavBar: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
@@ -17,7 +26,13 @@ const NavBar: React.FC = () => {
   const screens = useBreakpoint();
 
   return (
-    <Row style={{position:"sticky" }}>
+    <Row
+      style={{
+        position: "sticky",
+        borderRadius: "50px ",
+        borderColor: "black",
+      }}
+    >
       {screens.sm || screens.md ? (
         <>
           <Col span={8} style={{ color: `${secondary}` }}>
@@ -29,9 +44,9 @@ const NavBar: React.FC = () => {
             <Button
               type="link"
               onClick={() => navigate("/")}
-              style={{ paddingInlineStart: "2px"  ,color: `${secondary}` }}
+              style={{ paddingInlineStart: "2px", color: `${secondary}` }}
             >
-              {titleEnterprise}
+              <Text>{titleEnterprise}</Text>
             </Button>
           </Col>
           {Routers().map((router) => (
