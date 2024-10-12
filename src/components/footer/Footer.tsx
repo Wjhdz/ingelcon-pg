@@ -7,6 +7,7 @@ import {
   InstagramOutlined,
   PhoneFilled,
   TikTokOutlined,
+  XOutlined,
 } from "../../tools/icon";
 import type { LayoutFooterProps } from "../../interfaces/layout/layout";
 import { colorSecondary, colorSecondaryAndWhite } from "../../css/styles";
@@ -30,6 +31,7 @@ const CustomFooter: React.FC = () => {
     },
     { link: facebooklink, icon: <FacebookOutlined /> },
     { link: tiktoklink, icon: <TikTokOutlined /> },
+    { link: "", icon: <XOutlined /> },
   ];
 
   const onClick = (link: string) => {
