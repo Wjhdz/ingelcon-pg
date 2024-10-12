@@ -2,6 +2,7 @@ export {
   ConfigProvider,
   Menu,
   Button,
+  type ButtonProps,
   Layout,
   Typography,
   Col,

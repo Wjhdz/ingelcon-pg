@@ -10,6 +10,8 @@ import {
 import type { LayoutFooterProps } from "../../interfaces/layout/layout";
 import { colorSecondary, colorSecondaryAndWhite } from "../../css/styles";
 import {
+  city,
+  departament,
   direccion,
   email,
   facebooklink,
@@ -17,6 +19,7 @@ import {
   tel1,
   tel2,
 } from "../../constants";
+import { DividerC } from "../antd/DividerC";
 
 const { Text } = Typography;
 
@@ -34,14 +37,19 @@ const CustomFooter: React.FC = () => {
   };
 
   return (
-    <Row gutter={[8, 8]}>
+    <Row gutter={[8, 8]} style={{ justifyContent: "center" }}>
       <Col xs={24} md={8} lg={8}>
         <Space direction="vertical">
           <Text style={colorSecondary} strong>
             Dirección:
           </Text>
           <Text style={colorSecondary}>
-            <EnvironmentOutlined /> {direccion}
+            <Col>
+              <EnvironmentOutlined /> {direccion}
+            </Col>
+            <Col>
+              {city} <DividerC></DividerC> {departament}
+            </Col>
           </Text>
         </Space>
       </Col>
