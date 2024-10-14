@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export default interface routeinterface {
   id: number;
-  path: string | string[];
+  path: string;
   element: ReactNode;
   visible: boolean;
   name: string;

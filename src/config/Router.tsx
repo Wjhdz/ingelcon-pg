@@ -8,7 +8,7 @@ const Routers = () => {
   const routes: routeinterface[] = [
     {
       id: 0,
-      path: ["/", "/home", "/inicio"],
+      path: "/",
       name: "Home",
       visible: false,
       element: <Home />,

@@ -25,7 +25,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
       </Header>
       <Content
         style={{
-          minHeight: "80vh",
+          minHeight: "auto",
           ...backgroundColorWhite,
           ...colorSecondary,
         }}
