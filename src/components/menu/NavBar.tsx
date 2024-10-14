@@ -55,7 +55,13 @@ const NavBar: React.FC = () => {
                 <Col span={6} style={{ textAlign: "end" }}>
                   <Button
                     type="link"
-                    onClick={() => navigate(router.path)}
+                    onClick={() =>
+                      navigate(
+                        Array.isArray(router.path)
+                          ? router.path[0]
+                          : router.path
+                      )
+                    }
                     style={{ color: `${secondary}` }}
                   >
                     {router.name}
@@ -108,8 +114,14 @@ const NavBar: React.FC = () => {
                     <Col span={24}>
                       <Button
                         type="link"
-                        onClick={() => navigate(router.path)}
-                        style={styleColorS}
+                        onClick={() =>
+                          navigate(
+                            Array.isArray(router.path)
+                              ? router.path[0]
+                              : router.path
+                          )
+                        }
+                        style={{ color: `${secondary}` }}
                       >
                         {router.name}
                       </Button>
