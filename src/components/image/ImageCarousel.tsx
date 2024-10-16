@@ -27,7 +27,6 @@ const ImageCarousel: React.FC = () => {
           style={{
             alignContent: "center",
             textAlign: "center",
-
             ...carouselContainerStyle,
           }}
         >

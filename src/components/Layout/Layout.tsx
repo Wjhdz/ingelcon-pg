@@ -18,6 +18,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
           position: "sticky",
           top: 0,
           zIndex: 1,
+          width: "auto",
           ...backgroundColorWhite,
           borderBottom: `2px solid ${secondary}`,
         }}
@@ -29,7 +30,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
           minHeight: "auto",
           ...backgroundColorWhite,
           ...colorSecondary,
-          minWidth: "412px ",
+          minWidth: "411px",
         }}
       >
         {children}
