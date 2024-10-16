@@ -14,6 +14,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
     <>
       <Header
         style={{
+          minWidth: "412px ",
           position: "sticky",
           top: 0,
           zIndex: 1,
@@ -28,6 +29,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
           minHeight: "auto",
           ...backgroundColorWhite,
           ...colorSecondary,
+          minWidth: "412px ",
         }}
       >
         {children}
