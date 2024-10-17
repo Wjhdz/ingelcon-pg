@@ -41,7 +41,7 @@ const NavBar: React.FC = () => {
           onClick={() => navigate("/")}
           style={{ paddingInlineStart: "2px", color: `${secondary}` }}
         >
-          <Text>{titleEnterprise}</Text>
+          <Text style={{ color: secondary }}>{titleEnterprise}</Text>
         </Button>
       </Col>
       <Col
