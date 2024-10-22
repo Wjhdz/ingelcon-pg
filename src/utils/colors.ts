@@ -1,9 +1,9 @@
-export const primary ="#12AC4A"
-export const secondary ="#244F6F"
-export const blue= "#1CB1B5"
-export const text = "#141414"
-export const white= "#FFFFFF"
-export const black= "#000000"
-export const grey = "#F1F1F1"
-
-
+export const Colors = {
+  primary: "#12AC4A",
+  secondary: "#244F6F",
+  blue: "#1CB1B5",
+  text: "#141414",
+  white: "#FFFFFF",
+  black: "#000000",
+  grey: "#F1F1F1",
+};

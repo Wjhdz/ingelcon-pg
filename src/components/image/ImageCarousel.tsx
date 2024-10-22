@@ -8,7 +8,7 @@ import {
   buttonHoverStyle, // Nuevo estilo para hover
 } from "../../css/gallerystyles";
 import { imagesCarouselv2 as images, ObjectImage } from "../../utils/images.ts";
-
+import { seeMore } from "../../constants.tsx";
 const ImageCarousel: React.FC = () => {
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false); // Estado para hover
@@ -25,8 +25,6 @@ const ImageCarousel: React.FC = () => {
           infinite={true}
           dots={true}
           style={{
-            alignContent: "center",
-            textAlign: "center",
             ...carouselContainerStyle,
           }}
         >
@@ -48,7 +46,7 @@ const ImageCarousel: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
                 onClick={() => navigate(image.link)}
               >
-                Ver más
+                {seeMore}
               </Button>
             </Col>
           ))}

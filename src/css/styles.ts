@@ -1,4 +1,16 @@
-import { secondary, white } from "../utils/colors";
+import { Colors } from "../utils/colors";
+const { secondary, white } = Colors;
+
+export const colorSecondary = { color: `${secondary}` };
+
+export const colorWhite = { color: `${white}` };
+
+export const backgroundColorWhite = { background: `${white}` };
+
+export const colorSecondaryAndWhite = {
+  ...colorWhite,
+  background: `${secondary}`,
+};
 
 export const card = {
   padding: "10px",
@@ -12,13 +24,19 @@ export const rows = {
   display: "flex",
 };
 
-export const colorSecondary = { color: `${secondary}` };
+export const headerLayoutStyle = {
+  minWidth: "412px ",
+  position: "sticky" as "sticky",
+  top: 0,
+  zIndex: 1,
+  width: "auto",
+  background: white,
+  borderBottom: `2px solid ${secondary}`,
+};
 
-export const colorWhite = { color: `${white}` };
-
-export const backgroundColorWhite = { background: `${white}` };
-
-export const colorSecondaryAndWhite = {
-  ...colorWhite,
-  background: `${secondary}`,
+export const contentLayoutStyle = {
+  minHeight: "auto",
+  background: `${white}`,
+  color: `${secondary}`,
+  minWidth: "411px",
 };

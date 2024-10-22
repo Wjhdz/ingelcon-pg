@@ -9,13 +9,15 @@ import {
   Drawer,
   Typography,
 } from "../../tools/desing";
-import { secondary } from "../../../src/utils/colors";
+import { Colors } from "../../../src/utils/colors";
 import { DividerC as Divider } from "../antd/DividerC";
 import { MenuFoldOutlined } from "../../tools/icon";
 import Routers from "../../config/Router";
 import SvgIcon from "../../assests/Logo.svg";
 import { titleEnterprise } from "../../constants";
 import { colorSecondary as styleColorS } from "../../css/styles";
+
+const { secondary } = Colors;
 const { Text } = Typography;
 
 const NavBar: React.FC = () => {
@@ -23,13 +25,7 @@ const NavBar: React.FC = () => {
   const [stateOpen, setStateOpen] = useState(false);
 
   return (
-    <Row
-      style={{
-        position: "sticky",
-        borderRadius: "50px ",
-        borderColor: "black",
-      }}
-    >
+    <Row>
       <Col xs={12} md={12} lg={6} xl={6} style={{ color: `${secondary}` }}>
         <Avatar
           src={<img src={SvgIcon} onClick={() => navigate("/")} />}
@@ -88,7 +84,7 @@ const NavBar: React.FC = () => {
             </Col>
           </Row>
         }
-        placement="left"
+        placement="right"
         closable={false}
         onClose={() => setStateOpen(false)}
         open={stateOpen}

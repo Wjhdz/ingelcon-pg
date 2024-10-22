@@ -1,7 +1,12 @@
-import { secondary, white } from "../utils/colors";
+import { Colors } from "../utils/colors";
+
+const { secondary, white } = Colors;
+
 // galleryStyles.ts
 
 export const carouselContainerStyle: React.CSSProperties = {
+  alignContent: "center",
+  textAlign: "center",
   margin: "10px ",
   padding: "20px",
   backgroundColor: secondary,
@@ -10,6 +15,7 @@ export const carouselContainerStyle: React.CSSProperties = {
 
 export const carouselImageStyle: React.CSSProperties = {
   borderRadius: "8px",
+  backgroundPosition: "center",
   height: "400px", // Ajusta esta altura según tus necesidades
 };
 

@@ -1,38 +1,23 @@
 import React from "react";
-import NavBar from "../menu/NavBar";
+import NavBar from "../navigation/NavBar";
 import CustomFooter from "../footer/Footer";
 import CustomFloatButton from "../Button/CustomFloatButton";
 import childrenprops from "../../interfaces/propsInterface";
 import { Layout } from "../../tools/desing";
-import { backgroundColorWhite, colorSecondary } from "../../css/styles";
-import { secondary } from "../../utils/colors";
-
+import {
+  backgroundColorWhite,
+  contentLayoutStyle,
+  headerLayoutStyle,
+} from "../../css/styles";
 const { Header, Content, Footer } = Layout;
 
 const LayoutC: React.FC<childrenprops> = ({ children }) => {
   return (
     <>
-      <Header
-        style={{
-          minWidth: "412px ",
-          position: "sticky",
-          top: 0,
-          zIndex: 1,
-          width: "auto",
-          ...backgroundColorWhite,
-          borderBottom: `2px solid ${secondary}`,
-        }}
-      >
+      <Header style={headerLayoutStyle}>
         <NavBar />
       </Header>
-      <Content
-        style={{
-          minHeight: "auto",
-          ...backgroundColorWhite,
-          ...colorSecondary,
-          minWidth: "411px",
-        }}
-      >
+      <Content style={contentLayoutStyle}>
         {children}
         <CustomFloatButton />
       </Content>
