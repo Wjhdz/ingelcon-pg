@@ -3,49 +3,31 @@ import { Row, Col, Typography, Space, Button } from "../../tools/desing";
 import {
   MailOutlined,
   EnvironmentOutlined,
-  FacebookOutlined,
-  InstagramOutlined,
   PhoneFilled,
 } from "../../tools/icon";
-import type { LayoutFooterProps } from "../../interfaces/layout/layout";
 import { colorSecondary, colorSecondaryAndWhite } from "../../css/styles";
-import {
-  city,
-  departament,
-  direccion,
-  email,
-  facebooklink,
-  instagramLink,
-  tel1,
-  tel2,
-} from "../../constants";
+import { InfoCompany, socialmedia as access } from "../../constants";
+const { city, departament, adress, email, phone1, phone2 } = InfoCompany;
+
 import { DividerC } from "../antd/DividerC";
 
 const { Text } = Typography;
 
 const CustomFooter: React.FC = () => {
-  const access: LayoutFooterProps[] = [
-    {
-      link: instagramLink,
-      icon: <InstagramOutlined />,
-    },
-    { link: facebooklink, icon: <FacebookOutlined /> },
-  ];
-
   const onClick = (link: string) => {
     window.open(link, "_blank");
   };
 
   return (
     <Row gutter={[8, 8]} style={{ justifyContent: "center" }}>
-      <Col xs={24} md={8} lg={8}>
+      <Col xs={24} md={8} lg={8} xl={8} xxl={8}>
         <Space direction="vertical">
           <Text style={colorSecondary} strong>
             Dirección:
           </Text>
           <Text style={colorSecondary}>
             <Col>
-              <EnvironmentOutlined /> {direccion}
+              <EnvironmentOutlined /> {adress}
             </Col>
             <Col>
               {city} <DividerC></DividerC> {departament}
@@ -53,7 +35,7 @@ const CustomFooter: React.FC = () => {
           </Text>
         </Space>
       </Col>
-      <Col xs={24} md={8} lg={8}>
+      <Col xs={24} md={8} lg={8} xl={8} xxl={8}>
         <Space direction="vertical">
           <Text style={colorSecondary} strong>
             Correo Electrónico:
@@ -65,11 +47,11 @@ const CustomFooter: React.FC = () => {
             Telefono:
           </Text>
           <Text style={colorSecondary}>
-            <PhoneFilled rotate={90} /> {tel1} - {tel2}
+            <PhoneFilled rotate={90} /> {phone1} - {phone2}
           </Text>
         </Space>
       </Col>
-      <Col xs={24} md={8} lg={8}>
+      <Col xs={24} md={8} lg={8} xl={8} xxl={8}>
         <Space direction="vertical">
           <Text style={colorSecondary} strong>
             Síguenos:

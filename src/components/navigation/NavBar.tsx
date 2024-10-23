@@ -14,9 +14,9 @@ import { DividerC as Divider } from "../antd/DividerC";
 import { MenuFoldOutlined } from "../../tools/icon";
 import Routers from "../../config/Router";
 import SvgIcon from "../../assests/Logo.svg";
-import { titleEnterprise } from "../../constants";
+import { InfoCompany } from "../../constants";
 import { colorSecondary as styleColorS } from "../../css/styles";
-
+const { nameCompany } = InfoCompany;
 const { secondary } = Colors;
 const { Text } = Typography;
 
@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
           onClick={() => navigate("/")}
           style={{ paddingInlineStart: "2px", color: `${secondary}` }}
         >
-          <Text style={{ color: secondary }}>{titleEnterprise}</Text>
+          <Text style={{ color: secondary }}>{nameCompany}</Text>
         </Button>
       </Col>
       <Col
@@ -80,11 +80,11 @@ const NavBar: React.FC = () => {
                 alt="Custom Icon"
               ></Avatar>
               <Divider />
-              {titleEnterprise}
+              {nameCompany}
             </Col>
           </Row>
         }
-        placement="right"
+        placement="left"
         closable={false}
         onClose={() => setStateOpen(false)}
         open={stateOpen}

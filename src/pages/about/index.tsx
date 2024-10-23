@@ -4,7 +4,7 @@ import { Row, Col, Typography, Image } from "../../tools/desing";
 import { aboutUs } from "../../constants";
 import { Colors } from "../../utils/colors";
 
-const { secondary, text } = Colors;
+const { secondary, white } = Colors;
 const { Title, Paragraph } = Typography;
 
 const About: React.FC = () => {
@@ -25,17 +25,23 @@ const About: React.FC = () => {
           color: secondary,
         }}
       >
-        <Row style={{ background: "white" }}>
+        <Row style={{ background: white }}>
           <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
             <Title
               level={2}
-              style={{ color: text, textAlign: "center", marginBottom: "40px" }}
+              style={{
+                color: secondary,
+                textAlign: "center",
+                marginBottom: "40px",
+              }}
             >
               {aboutUs.title}
             </Title>
           </Col>
           <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
-            <Paragraph style={{ color: text }}>{aboutUs.description}</Paragraph>
+            <Paragraph style={{ color: secondary }}>
+              {aboutUs.description}
+            </Paragraph>
           </Col>
           <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
             <Image

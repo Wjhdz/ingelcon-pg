@@ -1,7 +1,10 @@
 import React from "react";
 import { FloatButton } from "../../tools/desing";
 import { WhatsAppOutlined } from "../../tools/icon";
-import { whatsappLink } from "../../constants";
+import { networksLinks } from "../../constants";
+import { Colors } from "../../utils/colors";
+const { whatsappColor } = Colors;
+const { whatsapp } = networksLinks;
 const CustomFloatButton: React.FC = () => {
   const onClick = (link: string) => {
     window.open(link, "_blank");
@@ -10,8 +13,8 @@ const CustomFloatButton: React.FC = () => {
   return (
     <FloatButton
       tooltip={<div>Chat de Whastapp</div>}
-      icon={<WhatsAppOutlined style={{ color: "#09c03f" }} />}
-      onClick={() => onClick(whatsappLink)}
+      icon={<WhatsAppOutlined style={{ color: whatsappColor }} />}
+      onClick={() => onClick(whatsapp)}
     />
   );
 };

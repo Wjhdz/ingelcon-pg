@@ -1,19 +1,42 @@
 import { LayoutFooterProps } from "./interfaces/layout/layout.ts";
-import { FacebookOutlined, InstagramOutlined } from "./tools/icon.ts";
+import {
+  FacebookOutlined,
+  InstagramOutlined,
+  WhatsAppOutlined,
+} from "./tools/icon.ts";
 
-export const titleEnterprise = "INGELCON PG";
-export const name = "Jorge";
-export const instagramLink = "";
-export const facebooklink = "";
-export const whatsappLink = "https://wa.me/+573005643431";
-export const email = "contacto@ejemplo.com";
-export const tel1 = "3216653009";
-export const tel2 = "3006787710";
-export const direccion = " calle 4 #7-28";
-export const city = "Barranquilla";
-export const departament = "Atlantico";
-export const country = "Colombia";
+const nameCompany = "INGELCON PG";
+
+const instagramLink = "";
+const facebooklink = "";
+const whatsappLink = "https://wa.me/+573005643431";
+const email = "contacto@ejemplo.com";
+const tel1 = "3216653009";
+const tel2 = "3006787710";
+const adress = " calle 4 #7-28";
+const city = "Barranquilla";
+const departament = "Atlantico";
+const country = "Colombia";
+const slogan = "";
 export const seeMore = "Ver más";
+
+export const networksLinks = {
+  instagram: instagramLink,
+  facebook: facebooklink,
+  whatsapp: whatsappLink,
+};
+
+export const InfoCompany = {
+  nameCompany: nameCompany,
+  adress: adress,
+  email: email,
+  phone1: tel1,
+  phone2: tel2,
+  city: city,
+  departament: departament,
+  country: country,
+  slogan: slogan,
+};
 
 export const socialmedia: LayoutFooterProps[] = [
   {
@@ -21,6 +44,7 @@ export const socialmedia: LayoutFooterProps[] = [
     icon: <InstagramOutlined />,
   },
   { link: facebooklink, icon: <FacebookOutlined /> },
+  { link: whatsappLink, icon: <WhatsAppOutlined /> },
 ];
 
 export const aboutUs = {

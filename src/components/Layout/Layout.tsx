@@ -21,7 +21,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
         {children}
         <CustomFloatButton />
       </Content>
-      <Footer style={backgroundColorWhite}>
+      <Footer style={{ minWidth: "411px", ...backgroundColorWhite }}>
         <CustomFooter />
       </Footer>
     </>
