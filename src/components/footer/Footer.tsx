@@ -7,10 +7,18 @@ import {
 } from "../../tools/icon";
 import { colorSecondary, colorSecondaryAndWhite } from "../../css/styles";
 import { InfoCompany, socialmedia as access } from "../../constants";
-const { city, departament, adress, email, phone1, phone2 } = InfoCompany;
-
+const { nameCompany, city, departament, adress, email, phone1, phone2 } =
+  InfoCompany;
+const { secondary } = Colors;
 import { DividerC } from "../antd/DividerC";
+import { Colors } from "../../utils/colors";
 
+const fechaActual = new Date();
+
+const fechaToUTC = fechaActual.toUTCString();
+const year = fechaActual.getUTCFullYear();
+
+console.log(year, " UTC-Format", fechaToUTC);
 const { Text } = Typography;
 
 const CustomFooter: React.FC = () => {
@@ -19,7 +27,10 @@ const CustomFooter: React.FC = () => {
   };
 
   return (
-    <Row gutter={[8, 8]} style={{ justifyContent: "center" }}>
+    <Row
+      gutter={[8, 8]}
+      style={{ justifyContent: "center", alignContent: "center" }}
+    >
       <Col xs={24} md={8} lg={8} xl={8} xxl={8}>
         <Space direction="vertical">
           <Text style={colorSecondary} strong>
@@ -67,6 +78,14 @@ const CustomFooter: React.FC = () => {
               />
             ))}
           </Space>
+        </Space>
+      </Col>
+      <Col sm={24} md={24} lg={24} xxl={24}>
+        <Space>
+          {" "}
+          <Text style={{ color: secondary, alignContent: "center" }}>
+            © {year} {nameCompany}z Todos los derechos reservados.
+          </Text>
         </Space>
       </Col>
     </Row>

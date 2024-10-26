@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
   const [stateOpen, setStateOpen] = useState(false);
 
   return (
-    <Row>
+    <Row align="middle" style={{ minWidth: "330px" }}>
       <Col xs={12} md={12} lg={6} xl={6} style={{ color: `${secondary}` }}>
         <Avatar
           src={<img src={SvgIcon} onClick={() => navigate("/")} />}

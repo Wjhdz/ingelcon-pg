@@ -5,7 +5,7 @@ import CustomFloatButton from "../Button/CustomFloatButton";
 import childrenprops from "../../interfaces/propsInterface";
 import { Layout } from "../../tools/desing";
 import {
-  backgroundColorWhite,
+  footerLayoutStyle,
   contentLayoutStyle,
   headerLayoutStyle,
 } from "../../css/styles";
@@ -13,7 +13,7 @@ const { Header, Content, Footer } = Layout;
 
 const LayoutC: React.FC<childrenprops> = ({ children }) => {
   return (
-    <>
+    <Layout style={{ minHeight: "100vh" }}>
       <Header style={headerLayoutStyle}>
         <NavBar />
       </Header>
@@ -21,10 +21,10 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
         {children}
         <CustomFloatButton />
       </Content>
-      <Footer style={{ minWidth: "411px", ...backgroundColorWhite }}>
+      <Footer style={footerLayoutStyle}>
         <CustomFooter />
       </Footer>
-    </>
+    </Layout>
   );
 };
 

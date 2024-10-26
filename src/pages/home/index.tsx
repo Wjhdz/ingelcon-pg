@@ -1,7 +1,8 @@
 import React from "react";
 import { Col, Row } from "../../tools/desing";
 import Layout from "../../components/Layout/Layout";
-import ImageCarousel from "../../components/image/ImageCarousel";
+// import ImageCarousel from "../../components/image/ImageCarousel";
+import Hero from "../../components/Hero";
 // import { text } from "../../utils/colors";
 
 const Home: React.FC = () => {
@@ -9,8 +10,9 @@ const Home: React.FC = () => {
     <Layout>
       <Row>
         <Col xs={24} md={24} lg={24} xl={24} xxl={24}>
-          <ImageCarousel />
+          <Hero />
         </Col>
+        <Col xs={24} md={24} lg={24} xl={24} xxl={24}></Col>
       </Row>
     </Layout>
   );
