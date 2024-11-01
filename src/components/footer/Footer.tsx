@@ -84,7 +84,7 @@ const CustomFooter: React.FC = () => {
         <Space>
           {" "}
           <Text style={{ color: secondary, alignContent: "center" }}>
-            © {year} {nameCompany}z Todos los derechos reservados.
+            © {year} {nameCompany} Todos los derechos reservados.
           </Text>
         </Space>
       </Col>

@@ -26,7 +26,7 @@ const NavBar: React.FC = () => {
 
   return (
     <Row align="middle" style={{ minWidth: "330px" }}>
-      <Col xs={12} md={12} lg={6} xl={6} style={{ color: `${secondary}` }}>
+      <Col xs={12} md={12} lg={4} xl={4} style={{ color: `${secondary}` }}>
         <Avatar
           src={<img src={SvgIcon} onClick={() => navigate("/")} />}
           alt="Custom Icon"
@@ -54,7 +54,7 @@ const NavBar: React.FC = () => {
       {Routers().map((router) => (
         <>
           {router.visible === true && (
-            <Col xs={0} md={0} lg={6} xl={6} style={{ textAlign: "end" }}>
+            <Col xs={0} md={0} lg={4} xl={4} style={{ textAlign: "end" }}>
               <Button
                 type="link"
                 onClick={() =>
@@ -93,7 +93,7 @@ const NavBar: React.FC = () => {
         <Row gutter={[8, 8]}>
           {Routers().map((router) => (
             <>
-              {router.visible === true && (
+              {router.visible === true && router.path != "" && (
                 <Col span={24}>
                   <Button
                     type="link"

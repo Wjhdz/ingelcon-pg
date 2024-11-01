@@ -3,39 +3,47 @@ import About from "../pages/about";
 import Home from "../pages/home";
 import NotFound from "../pages/notFound";
 import Service from "../pages/service";
-import Proyects from "../pages/proyects";
+import Proyects from "../pages/projects";
 const Routers = () => {
   const routes: routeinterface[] = [
     {
       id: 0,
-      path: "/",
-      name: "Home",
-      visible: false,
+      path: "",
+      name: "",
+      visible: true,
       element: <Home />,
     },
     {
       id: 1,
+      path: "/",
+      name: "Home",
+      visible: true,
+      element: <Home />,
+    },
+    {
+      id: 2,
       path: "/nosotros",
       name: "Nosotros",
       visible: true,
       element: <About />,
     },
     {
-      id: 2,
+      id: 3,
       path: "/servicios",
       name: "Servicios",
       element: <Service />,
       visible: true,
     },
     {
-      id: 3,
+      id: 4,
       path: "/proyectos",
       name: "Proyectos",
       visible: true,
       element: <Proyects />,
     },
+
     {
-      id: 4,
+      id: 5,
       path: "/*",
       name: "NotFound",
       visible: false,

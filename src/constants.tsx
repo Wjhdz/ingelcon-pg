@@ -1,8 +1,13 @@
+import { ConstServices } from "../src/interfaces/const/const.ts";
+
 import { LayoutFooterProps } from "./interfaces/layout/layout.ts";
 import {
   FacebookOutlined,
   InstagramOutlined,
   WhatsAppOutlined,
+  CodeIcon,
+  LightbulbIcon,
+  ShieldIcon,
 } from "./tools/icon.ts";
 
 const nameCompany = "INGELCON PG";
@@ -25,7 +30,6 @@ export const networksLinks = {
   facebook: facebooklink,
   whatsapp: whatsappLink,
 };
-
 export const InfoCompany = {
   nameCompany: nameCompany,
   adress: adress,
@@ -37,7 +41,50 @@ export const InfoCompany = {
   country: country,
   slogan: slogan,
 };
+export const services: ConstServices[] = [
+  {
+    title: "Desarrollo de Software",
+    description:
+      "Creamos soluciones de software personalizadas para impulsar su negocio.",
+    icon: <CodeIcon size={48} />,
+  },
+  {
+    title: "Consultoría IT",
+    description:
+      "Asesoramiento experto para optimizar su infraestructura tecnológica.",
+    icon: <LightbulbIcon size={48} />,
+  },
+  {
+    title: "Ciberseguridad",
+    description:
+      "Protegemos sus activos digitales contra amenazas cibernéticas.",
+    icon: <ShieldIcon size={48} />,
+  },
+];
 
+export const projects = [
+  {
+    title: "Sistema de Gestión Empresarial",
+    description:
+      "Desarrollo de un ERP personalizado para una empresa líder en logística.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    title: "Plataforma de E-learning",
+    description:
+      "Creación de una plataforma educativa en línea para una universidad prestigiosa.",
+    image:
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    title: "App de Salud y Bienestar",
+    description:
+      "Desarrollo de una aplicación móvil para seguimiento de hábitos saludables.",
+    image:
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  },
+];
 export const socialmedia: LayoutFooterProps[] = [
   {
     link: instagramLink,
@@ -46,7 +93,6 @@ export const socialmedia: LayoutFooterProps[] = [
   { link: facebooklink, icon: <FacebookOutlined /> },
   { link: whatsappLink, icon: <WhatsAppOutlined /> },
 ];
-
 export const aboutUs = {
   title: "Sobre Nosotros",
   description:

@@ -12,3 +12,4 @@ export {
   PhoneFilled,
   ApiOutlined,
 } from "@ant-design/icons";
+export { CodeIcon, LightbulbIcon, ShieldIcon } from "lucide-react";

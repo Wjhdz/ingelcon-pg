@@ -6,6 +6,7 @@ export {
   Layout,
   Typography,
   Col,
+  Card,
   Row,
   Drawer,
   Avatar,

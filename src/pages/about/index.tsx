@@ -20,7 +20,7 @@ const About: React.FC = () => {
           alignContent: "center",
           textAlign: "center",
           margin: "10px",
-          padding: "20px",
+
           borderRadius: "8px",
           color: secondary,
         }}
@@ -45,6 +45,7 @@ const About: React.FC = () => {
           </Col>
           <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
             <Image
+              preview={false}
               src={aboutUs.image}
               alt="About Us"
               style={{ width: "100%", borderRadius: "8px" }}
