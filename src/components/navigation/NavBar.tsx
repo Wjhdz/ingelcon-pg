@@ -54,14 +54,17 @@ const NavBar: React.FC = () => {
       {Routers().map((router) => (
         <>
           {router.visible === true && (
-            <Col xs={0} md={0} lg={4} xl={4} style={{ textAlign: "end" }}>
+            <Col
+              xs={0}
+              md={0}
+              lg={4}
+              xl={4}
+              xxl={4}
+              style={{ textAlign: "end" }}
+            >
               <Button
                 type="link"
-                onClick={() =>
-                  navigate(
-                    Array.isArray(router.path) ? router.path[0] : router.path
-                  )
-                }
+                onClick={() => navigate(router.path)}
                 style={{ color: `${secondary}` }}
               >
                 {router.name}

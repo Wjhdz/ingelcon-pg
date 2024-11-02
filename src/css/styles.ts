@@ -29,6 +29,7 @@ export const headerLayoutStyle = {
   position: "sticky" as "sticky",
   top: 0,
   zIndex: 1,
+  padding: "0px 25px  ",
   width: "100%",
   background: white,
   borderBottom: `2px solid ${secondary}`,

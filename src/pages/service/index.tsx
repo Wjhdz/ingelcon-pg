@@ -38,7 +38,7 @@ const Services: React.FC = () => {
             >
               {services.map((service, index) => {
                 return (
-                  <Col xs={24} sm={12} md={8} key={index}>
+                  <Col xs={24} sm={24} md={8} xl={8} xxl={8} key={index}>
                     <Card
                       hoverable
                       style={{ height: "100%" }}
