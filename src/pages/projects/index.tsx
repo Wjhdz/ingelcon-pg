@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col, Card, Typography } from "../../tools/desing";
 import { projects } from "../../constants";
-import Layout from "../../components/Layout/Layout";
 import { Colors } from "../../utils/colors";
 
 const { secondary } = Colors;
@@ -9,7 +8,7 @@ const { Title, Paragraph } = Typography;
 
 const Projects: React.FC = () => {
   return (
-    <Layout>
+    <>
       <Col>
         <Title
           level={2}
@@ -52,7 +51,7 @@ const Projects: React.FC = () => {
           ))}
         </Row>
       </Col>
-    </Layout>
+    </>
   );
 };
 

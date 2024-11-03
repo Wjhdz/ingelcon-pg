@@ -1,4 +1,4 @@
-import Router from "./router";
+import Router from "./pages/home/index";
 
 const App: React.FC = () => {
   return <Router />;

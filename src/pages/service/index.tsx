@@ -2,14 +2,13 @@ import React from "react";
 import { Row, Col, Card, Typography, Button } from "../../tools/desing";
 import { services } from "../../constants";
 import { Colors } from "../../utils/colors";
-import Layout from "../../components/Layout/Layout";
 
 const { Title, Paragraph } = Typography;
 
 const { secondary } = Colors;
 const Services: React.FC = () => {
   return (
-    <Layout>
+    <>
       <Col>
         <div
           style={{
@@ -76,7 +75,7 @@ const Services: React.FC = () => {
           </Col>
         </div>
       </Col>
-    </Layout>
+    </>
   );
 };
 

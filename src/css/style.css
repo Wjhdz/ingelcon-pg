@@ -1,0 +1,8 @@
+.section {
+  min-height: 100vh; /* Asegura que cada sección ocupe al menos la altura de la pantalla */
+  padding: 25px 2px; /* Relleno uniforme */
+  box-sizing: border-box; /* Incluye el relleno en el cálculo de la altura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

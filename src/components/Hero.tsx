@@ -10,32 +10,39 @@ const { secondary, white } = Colors;
 const { Title, Paragraph } = Typography;
 const Hero: React.FC = () => {
   return (
-    <Col
-      style={{
-        padding: "100px 15px",
-        textAlign: "center",
-        background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        borderRadius: "10px",
-      }}
-    >
-      <Title style={{ color: white }}>{nameCompany}</Title>
-      <Paragraph style={{ color: white, fontSize: "1.2em" }}>
-        {slogan}
-      </Paragraph>
-      <Button
-        type="primary"
-        size="large"
+    <>
+      <Col
+        xs={24}
+        md={24}
+        lg={24}
+        xl={24}
+        xxl={24}
         style={{
-          marginTop: "20px",
-          background: secondary,
-          borderColor: secondary,
+          padding: "150px 5px",
+          textAlign: "center",
+          background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          borderRadius: "10px",
         }}
       >
-        Contáctanos
-      </Button>
-    </Col>
+        <Title style={{ color: white }}>{nameCompany}</Title>
+        <Paragraph style={{ color: white, fontSize: "1.2em" }}>
+          {slogan}
+        </Paragraph>
+        <Button
+          type="primary"
+          size="large"
+          style={{
+            alignContent: "center",
+            background: secondary,
+            borderColor: secondary,
+          }}
+        >
+          Contáctanos
+        </Button>
+      </Col>
+    </>
   );
 };
 

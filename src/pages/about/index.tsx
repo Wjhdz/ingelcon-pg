@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../../components/Layout/Layout";
 import { Row, Col, Typography, Image } from "../../tools/desing";
 import { aboutUs } from "../../constants";
 import { Colors } from "../../utils/colors";
@@ -9,7 +8,7 @@ const { Title, Paragraph } = Typography;
 
 const About: React.FC = () => {
   return (
-    <Layout>
+    <>
       <Col
         xs={24}
         md={24}
@@ -19,31 +18,38 @@ const About: React.FC = () => {
         style={{
           alignContent: "center",
           textAlign: "center",
-          margin: "10px",
 
           borderRadius: "8px",
           color: secondary,
         }}
       >
         <Row style={{ background: white }}>
-          <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
+          <Col xs={24} md={24} lg={24} xl={24} xxl={24}>
             <Title
               level={2}
               style={{
                 color: secondary,
                 textAlign: "center",
-                marginBottom: "40px",
+                marginBottom: "10px",
               }}
             >
               {aboutUs.title}
             </Title>
           </Col>
-          <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
-            <Paragraph style={{ color: secondary }}>
-              {aboutUs.description}
-            </Paragraph>
+          <Col xs={12} md={12} lg={24} xl={24} xxl={24}>
+            <Col style={{ padding: "20px", justifyContent: "center" }}>
+              <Paragraph
+                style={{
+                  color: secondary,
+                  alignItems: "flex-end",
+                  justifyContent: "end",
+                }}
+              >
+                {aboutUs.description}
+              </Paragraph>
+            </Col>
           </Col>
-          <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
+          <Col xs={12} md={12} lg={24} xl={24} xxl={24}>
             <Image
               preview={false}
               src={aboutUs.image}
@@ -53,7 +59,7 @@ const About: React.FC = () => {
           </Col>
         </Row>
       </Col>
-    </Layout>
+    </>
   );
 };
 

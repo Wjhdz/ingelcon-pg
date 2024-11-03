@@ -9,11 +9,11 @@ import {
   Drawer,
   Typography,
 } from "../../tools/desing";
-import { Colors } from "../../../src/utils/colors";
+import { Colors } from "../../utils/colors";
 import { DividerC as Divider } from "../antd/DividerC";
 import { MenuFoldOutlined } from "../../tools/icon";
 import Routers from "../../config/Router";
-import SvgIcon from "../../assests/Logo.svg";
+import SvgIcon from "../../assets/Logo.svg";
 import { InfoCompany } from "../../constants";
 import { colorSecondary as styleColorS } from "../../css/styles";
 const { nameCompany } = InfoCompany;
@@ -23,6 +23,13 @@ const { Text } = Typography;
 const NavBar: React.FC = () => {
   const navigate: NavigateFunction = useNavigate();
   const [stateOpen, setStateOpen] = useState(false);
+
+  const handleScroll = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <Row align="middle" style={{ minWidth: "330px" }}>
@@ -60,11 +67,11 @@ const NavBar: React.FC = () => {
               lg={4}
               xl={4}
               xxl={4}
-              style={{ textAlign: "end" }}
+              style={{ textAlign: "center" }}
             >
               <Button
                 type="link"
-                onClick={() => navigate(router.path)}
+                onClick={() => handleScroll(router.path)}
                 style={{ color: `${secondary}` }}
               >
                 {router.name}
@@ -100,7 +107,7 @@ const NavBar: React.FC = () => {
                 <Col span={24}>
                   <Button
                     type="link"
-                    onClick={() => navigate(router.path)}
+                    onClick={() => handleScroll(router.path)}
                     style={styleColorS}
                   >
                     {router.name}
