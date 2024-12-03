@@ -9,6 +9,8 @@ import {
   contentLayoutStyle,
   headerLayoutStyle,
 } from "../../css/styles";
+
+// Update the component to use the new props interface
 const { Header, Content, Footer } = Layout;
 
 const LayoutC: React.FC<childrenprops> = ({ children }) => {
