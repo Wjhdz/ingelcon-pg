@@ -19,7 +19,7 @@ const Services: React.FC = () => {
           {" "}
           <Col>
             <Title
-              level={2}
+              level={1}
               style={{
                 color: secondary,
                 textAlign: "center",

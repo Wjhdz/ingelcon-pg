@@ -20,7 +20,9 @@ const Hero: React.FC = () => {
         borderRadius: "10px",
       }}
     >
-      <Title style={{ color: white }}>{nameCompany}</Title>
+      {" "}
+      {/* nameCompany.split(" S.A.S.")[0] */}
+      <Title style={{ color: white }}>{nameCompany.split(" S.A.S.")[0]}</Title>
       <Paragraph style={{ color: white, fontSize: "1.2em" }}>
         {slogan}
       </Paragraph>

@@ -1,6 +1,7 @@
 import { ConstServices } from "../src/interfaces/const/const.ts";
 
 import { LayoutFooterProps } from "./interfaces/layout/layout.ts";
+import { elementsbtngroups } from "./interfaces/propsInterface.ts";
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -8,10 +9,13 @@ import {
   CodeIcon,
   LightbulbIcon,
   ShieldIcon,
+  FileInput,
+  MailOutlined,
 } from "./tools/icon.ts";
+import { Colors } from "./utils/colors.ts";
 
-const nameCompany = "INGELCON PG";
-
+const { white } = Colors;
+const nameCompany = "INGELCON PG S.A.S.";
 const instagramLink = "";
 const facebooklink = "";
 const whatsappLink = "https://wa.me/+573005643431";
@@ -30,6 +34,25 @@ export const networksLinks = {
   facebook: facebooklink,
   whatsapp: whatsappLink,
 };
+
+export const btngroup: elementsbtngroups[] = [
+  {
+    icon: <WhatsAppOutlined style={{ color: white }} />,
+    link: "",
+    tooltip: "Chat de Whatsapp",
+  },
+  {
+    icon: <FileInput style={{ color: white }} size={20} />,
+    link: "",
+    tooltip: "PQRS",
+  },
+  {
+    icon: <MailOutlined style={{ color: white }} />,
+    link: "",
+    tooltip: "Correo",
+  },
+];
+
 export const InfoCompany = {
   nameCompany: nameCompany,
   adress: adress,

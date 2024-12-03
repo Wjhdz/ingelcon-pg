@@ -1,21 +1,48 @@
 import React from "react";
-import { FloatButton } from "../../tools/desing";
-import { WhatsAppOutlined } from "../../tools/icon";
-import { networksLinks } from "../../constants";
+import { Button, FloatButton } from "../../tools/desing";
+import { CustomerServiceOutlined } from "../../tools/icon";
+import { btngroup } from "../../constants";
 import { Colors } from "../../utils/colors";
-const { whatsappColor } = Colors;
-const { whatsapp } = networksLinks;
+
+const { secondary, white } = Colors;
+
 const CustomFloatButton: React.FC = () => {
-  const onClick = (link: string) => {
+  const onclick = (link: string) => {
     window.open(link, "_blank");
   };
 
   return (
-    <FloatButton
-      tooltip={<div>Chat de Whastapp</div>}
-      icon={<WhatsAppOutlined style={{ color: whatsappColor }} />}
-      onClick={() => onClick(whatsapp)}
-    />
+    <FloatButton.Group
+      type="primary"
+      trigger="click"
+      tooltip={<div>Comunicaciones</div>}
+      style={{ color: secondary }}
+      icon={
+        <Button
+          type="link"
+          style={{
+            borderRadius: `2px solid ${secondary}`,
+            padding: "0",
+          }}
+        >
+          <CustomerServiceOutlined style={{ color: white }} />
+        </Button>
+      }
+    >
+      {btngroup.map((item, index) => {
+        console.log(index);
+        return (
+          <FloatButton
+            type="primary"
+            key={index}
+            tooltip={<div>{item.tooltip}</div>}
+            style={{ border: `1px solid ${white}` }}
+            icon={item.icon}
+            onClick={() => onclick(item.link)}
+          />
+        );
+      })}
+    </FloatButton.Group>
   );
 };
 

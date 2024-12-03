@@ -5,11 +5,11 @@ import {
   EnvironmentOutlined,
   PhoneFilled,
 } from "../../tools/icon";
-import { colorSecondary, colorSecondaryAndWhite } from "../../css/styles";
+
 import { InfoCompany, socialmedia as access } from "../../constants";
 const { nameCompany, city, departament, adress, email, phone1, phone2 } =
   InfoCompany;
-const { secondary } = Colors;
+const { secondary, white } = Colors;
 import { DividerC } from "../antd/DividerC";
 import { Colors } from "../../utils/colors";
 
@@ -29,48 +29,59 @@ const CustomFooter: React.FC = () => {
   return (
     <Row
       gutter={[8, 8]}
-      style={{ justifyContent: "center", alignContent: "center" }}
+      style={{
+        padding: "25px",
+        background: secondary,
+        borderRadius: "1em",
+        justifyContent: "",
+        alignContent: "center",
+      }}
     >
       <Col xs={24} md={8} lg={8} xl={8} xxl={8}>
         <Space direction="vertical">
-          <Text style={colorSecondary} strong>
+          <Text style={{ color: white }} strong>
             Dirección:
           </Text>
-          <Text style={colorSecondary}>
+          <Text style={{ color: white }}>
             <Col>
               <EnvironmentOutlined /> {adress}
             </Col>
             <Col>
-              {city} <DividerC></DividerC> {departament}
+              {city}{" "}
+              <DividerC
+                type="vertical"
+                style={{ background: `${white}`, color: `${white}` }}
+              ></DividerC>{" "}
+              {departament}
             </Col>
           </Text>
         </Space>
       </Col>
       <Col xs={24} md={8} lg={8} xl={8} xxl={8}>
         <Space direction="vertical">
-          <Text style={colorSecondary} strong>
+          <Text style={{ color: white }} strong>
             Correo Electrónico:
           </Text>
-          <Text style={colorSecondary}>
+          <Text style={{ color: white }}>
             <MailOutlined /> {email}
           </Text>
-          <Text style={colorSecondary} strong>
+          <Text style={{ color: white }} strong>
             Telefono:
           </Text>
-          <Text style={colorSecondary}>
+          <Text style={{ color: white }}>
             <PhoneFilled rotate={90} /> {phone1} - {phone2}
           </Text>
         </Space>
       </Col>
       <Col xs={24} md={8} lg={8} xl={8} xxl={8}>
         <Space direction="vertical">
-          <Text style={colorSecondary} strong>
+          <Text style={{ color: white }} strong>
             Síguenos:
           </Text>
           <Space size="middle">
             {access.map((item, index) => (
               <Button
-                style={colorSecondaryAndWhite}
+                style={{ color: secondary, backgroundColor: white }}
                 key={index}
                 type="link"
                 onClick={() => onClick(item.link)}
@@ -83,7 +94,7 @@ const CustomFooter: React.FC = () => {
       <Col sm={24} md={24} lg={24} xxl={24}>
         <Space>
           {" "}
-          <Text style={{ color: secondary, alignContent: "center" }}>
+          <Text style={{ color: white, alignContent: "center" }}>
             © {year} {nameCompany} Todos los derechos reservados.
           </Text>
         </Space>

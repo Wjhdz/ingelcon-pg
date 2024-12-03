@@ -28,7 +28,7 @@ const About: React.FC = () => {
         <Row style={{ background: white }}>
           <Col xs={24} md={12} lg={24} xl={24} xxl={24}>
             <Title
-              level={2}
+              level={1}
               style={{
                 color: secondary,
                 textAlign: "center",

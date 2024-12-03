@@ -37,7 +37,9 @@ const NavBar: React.FC = () => {
           onClick={() => navigate("/")}
           style={{ paddingInlineStart: "2px", color: `${secondary}` }}
         >
-          <Text style={{ color: secondary }}>{nameCompany}</Text>
+          <Text style={{ color: secondary }}>
+            {nameCompany.split(" S.A.S.")[0]}
+          </Text>
         </Button>
       </Col>
       <Col
@@ -83,7 +85,7 @@ const NavBar: React.FC = () => {
                 alt="Custom Icon"
               ></Avatar>
               <Divider />
-              {nameCompany}
+              {nameCompany.split(" S.A.S.")[0]}
             </Col>
           </Row>
         }

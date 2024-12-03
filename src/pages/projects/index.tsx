@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
     <Layout>
       <Col>
         <Title
-          level={2}
+          level={1}
           style={{
             color: secondary,
             textAlign: "center",

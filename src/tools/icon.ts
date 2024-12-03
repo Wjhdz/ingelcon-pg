@@ -11,5 +11,6 @@ export {
   MenuFoldOutlined,
   PhoneFilled,
   ApiOutlined,
+  CustomerServiceOutlined,
 } from "@ant-design/icons";
-export { CodeIcon, LightbulbIcon, ShieldIcon } from "lucide-react";
+export { CodeIcon, FileInput, LightbulbIcon, ShieldIcon } from "lucide-react";
