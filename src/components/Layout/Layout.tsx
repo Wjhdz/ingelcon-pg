@@ -25,6 +25,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
         <CustomFooter />
       </Footer>
     </Layout>
+    // Comenatrio
   );
 };
 
