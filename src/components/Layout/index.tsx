@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../navigation/NavBar";
 import CustomFooter from "../footer/Footer";
-import CustomFloatButton from "../button/customFloatButton/index";
+import CFButton from "../button/customFloatButton";
 import childrenprops from "../../interfaces/propsInterface";
 import { Layout } from "../../tools/desing";
 import {
@@ -21,7 +21,7 @@ const LayoutC: React.FC<childrenprops> = ({ children }) => {
       </Header>
       <Content style={contentLayoutStyle}>
         {children}
-        <CustomFloatButton />
+        <CFButton />
       </Content>
       <Footer style={footerLayoutStyle}>
         <CustomFooter />
