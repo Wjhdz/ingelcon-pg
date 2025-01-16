@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, FloatButton } from "../../tools/desing";
-import { CustomerServiceOutlined } from "../../tools/icon";
-import { btngroup } from "../../constants";
-import { Colors } from "../../utils/colors";
+import { Button, FloatButton } from "../../../tools/desing";
+import { CustomerServiceOutlined } from "../../../tools/icon";
+import { btngroup } from "../../../constants";
+import { Colors } from "../../../utils/colors";
 
 const { secondary, white } = Colors;
 
