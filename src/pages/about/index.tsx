@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../components/layout/index";
+import LayoutC from "../../components/layout/index";
 import { Row, Col, Typography, Image } from "../../tools/desing";
 import { aboutUs } from "../../constants";
 import { Colors } from "../../utils/colors";
@@ -9,7 +9,7 @@ const { Title, Paragraph } = Typography;
 
 const About: React.FC = () => {
   return (
-    <Layout>
+    <LayoutC>
       <Col
         xs={24}
         md={24}
@@ -53,7 +53,7 @@ const About: React.FC = () => {
           </Col>
         </Row>
       </Col>
-    </Layout>
+    </LayoutC>
   );
 };
 

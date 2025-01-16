@@ -2,14 +2,14 @@ import React from "react";
 import { Row, Col, Card, Typography } from "../../tools/desing";
 import { projects } from "../../constants";
 import { Colors } from "../../utils/colors";
-import Layout from "../../components/layout/index";
+import LayoutC from "../../components/layout/index";
 
 const { secondary } = Colors;
 const { Title, Paragraph } = Typography;
 
 const Projects: React.FC = () => {
   return (
-    <Layout>
+    <LayoutC>
       <Col>
         <Title
           level={1}
@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
           ))}
         </Row>
       </Col>
-    </Layout>
+    </LayoutC>
   );
 };
 
