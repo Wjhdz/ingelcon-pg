@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Row } from "../../tools/desing";
 import Layout from "../../components/layout";
-// import ImageCarousel from "../../components/image/ImageCarousel";
 import Hero from "../../components/Hero";
+// import ImageCarousel from "../../components/image/ImageCarousel";
 // import { text } from "../../utils/colors";
 
 const Home: React.FC = () => {
