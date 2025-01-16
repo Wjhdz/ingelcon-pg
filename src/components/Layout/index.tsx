@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../navigation/NavBar";
 import CustomFooter from "../footer/Footer";
-import CustomFloatButton from "../../components/button/CustomFloatButton/index";
+import CustomFloatButton from "../button/customFloatButton/index";
 import childrenprops from "../../interfaces/propsInterface";
 import { Layout } from "../../tools/desing";
 import {

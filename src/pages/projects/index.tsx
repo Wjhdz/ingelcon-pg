@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Card, Typography } from "../../tools/desing";
 import { projects } from "../../constants";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 import { Colors } from "../../utils/colors";
 
 const { secondary } = Colors;

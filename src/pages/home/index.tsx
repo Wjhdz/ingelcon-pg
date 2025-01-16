@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "../../tools/desing";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 // import ImageCarousel from "../../components/image/ImageCarousel";
 import Hero from "../../components/Hero";
 // import { text } from "../../utils/colors";
