@@ -20,6 +20,7 @@ const ImageCarousel: React.FC = () => {
     <Row justify={"center"} gutter={[16, 16]}>
       <Col>
         <Carousel
+          className=""
           autoplay={true}
           adaptiveHeight={true}
           infinite={true}

@@ -22,7 +22,9 @@ const Hero: React.FC = () => {
     >
       {" "}
       {/* nameCompany.split(" S.A.S.")[0] */}
-      <Title style={{ color: white }}>{nameCompany.split(" S.A.S.")[0]}</Title>
+      <Title className="" style={{ color: white }}>
+        {nameCompany.split(" S.A.S.")[0]}
+      </Title>
       <Paragraph style={{ color: white, fontSize: "1.2em" }}>
         {slogan}
       </Paragraph>

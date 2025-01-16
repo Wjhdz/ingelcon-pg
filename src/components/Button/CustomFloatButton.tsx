@@ -15,10 +15,12 @@ const CustomFloatButton: React.FC = () => {
     <FloatButton.Group
       type="primary"
       trigger="click"
+      className=""
       tooltip={<div>Comunicaciones</div>}
       style={{ color: secondary }}
       icon={
         <Button
+          className=""
           type="link"
           style={{
             borderRadius: `2px solid ${secondary}`,
@@ -33,6 +35,7 @@ const CustomFloatButton: React.FC = () => {
         console.log(index);
         return (
           <FloatButton
+            className=""
             type="primary"
             key={index}
             tooltip={<div>{item.tooltip}</div>}

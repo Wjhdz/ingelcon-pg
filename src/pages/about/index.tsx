@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout";
 import { Row, Col, Typography, Image } from "../../tools/desing";
 import { aboutUs } from "../../constants";
 import { Colors } from "../../utils/colors";
