@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Card, Typography } from "../../tools/desing";
 import { projects } from "../../constants";
 import { Colors } from "../../utils/colors";
-import Layout from "../../components/layout";
+import Layout from "../../components/layout/index";
 
 const { secondary } = Colors;
 const { Title, Paragraph } = Typography;
